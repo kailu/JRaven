@@ -129,6 +129,7 @@ public class GBMModel {
 				Object featureVal = features.get(tmpNode.featureIndex);
 				if(featureVal == null){
 					tmpNode = tmpNode.missingNode;
+					continue;
 				}
 				
 				Feature.TYPE type = this.allFeatures[tmpNode.featureIndex].type();
